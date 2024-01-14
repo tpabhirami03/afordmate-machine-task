@@ -7,6 +7,7 @@ import FeatureItem from "./FeatureItem";
 import game from "../assets/game.svg";
 import tik from "../assets/tik.svg";
 import xbox from "../assets/xbox.svg";
+import { Button } from "react-bootstrap";
 
 const fetaures = [
   {
@@ -30,63 +31,37 @@ function Home() {
   return (
     <>
       <div>
-        <Carousel interval={null}>
+        <Carousel interval={null} className="carosal-custom">
           <Carousel.Item>
             <img
+              className="background-img"
               src={CarouselImg}
               alt="Carousel Image"
-              style={{
-                width: "100vw",
-                height: "100vh",
-                backgroundSize: "no-repeat",
-              }}
             />
             <Carousel.Caption className="first-slide">
-              <h1 id="h1">MultiVersus</h1>
+              <h1 className="multi-text">MultiVersus</h1>
               <p id="p">
                 Now officially free to play for all <br /> Xbox users{" "}
               </p>
+
+              <Button className="get-it-now" variant="primary">
+                Get in now!
+              </Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              src={img2}
-              alt="Carousel Image"
-              style={{
-                width: "100vw",
-                height: "100vh",
-                backgroundSize: "no-repeat",
-              }}
-            />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
+            <img className="background-img" src={img2} alt="Carousel Image" />
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              src={img3}
-              alt="Carousel Image"
-              style={{
-                width: "100vw",
-                height: "100vh",
-                backgroundSize: "no-repeat",
-              }}
-            />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
+            <img className="background-img" src={img3} alt="Carousel Image" />
           </Carousel.Item>
         </Carousel>
       </div>
 
       {/* why eXStore */}
       <div className="features-container">
-        <div className="w-100 d-flex flex-column justify-content-center align-items-center xbox-text">
-          <h1 style={{ fontWeight: "600", marginTop: "40px" }}>Why eXStore?</h1>
+        <div className="w-100 d-flex flex-column justify-content-center align-items-center mt-3 xbox-text">
+          <h1>Why eXStore?</h1>
           <p>
             We are the official Xbox partner in indinasia that <br />
             provides official video games.{" "}
